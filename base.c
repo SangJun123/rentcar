@@ -50,3 +50,26 @@ void savelist(Record records[], int cnt){
   printf("Saved successfully. !!!\n");
 }
 
+void delete_condition(Record records[], int cnt) { 
+// 2. Delete all but : allows the user to enter a condition and delete all the records that does not satisfy the condition
+	int input, rememberIndex;
+	printf("Enter Vehicle number to save from deletion: ");
+	scanf("%d", &input);
+	for(int i = 0 ; i < cnt ; i++) {
+		if(records[i].carnumber == input){
+			rememberIndex = i;
+			continue;
+		}
+		
+		else {
+			records[i].carnumber = 0;
+			records[i].numberofseat = 0;
+			records[i].rentability = 0;
+		}
+	}
+	records[0].carnumber = records[rememberIndex].carnumber;
+	records[0].numberofseat = records[rememberIndex].numberofseat;
+	records[0].rentability = records[rememberIndex].rentability;
+	// move saved record from index i to index 0
+        printf("Delete complete!\n");	
+}

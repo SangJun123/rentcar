@@ -48,6 +48,10 @@ void input_handler(char input[], Record records[]){
     rent_a_car(records,count);
     count=count-1;
   }
+  else if((!strcmp(input, "6"))){
+    delete_condition(records, count); // delete all except specific car
+    count = 1; // record saved in first index
+  }
   /*else if(!strcmp(input, "6")){
     sortlist(records,count);
   }*/
@@ -70,6 +74,7 @@ void display_menu(){
 	printf(" 3. Search Car\n");
   printf(" 4. Save all list\n");
   printf(" 5. Rent a Car\n");
+  printf(" 6. Delete all except\n");
   //printf(" 6. Sort List\n");
 	printf(" 99. Quit\n");
 }
