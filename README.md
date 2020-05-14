@@ -1,5 +1,8 @@
 # rentcar
+## what is the program?
 It allows users to return their rental cars by entering the number of seats, vehicle numbers and whether they can be rented. And you can see a list of cars that you returned and a list of cars that you can rent that fit the number of seats you want.
+
+### Function
 
 * __void add_a_record(Record records[], int cnt)__
 ```
