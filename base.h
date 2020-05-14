@@ -7,5 +7,6 @@
 void print_all_records(Record[],int cnt);
 void add_a_record(Record[] ,int cnt);
 void savelist(Record records[], int cnt);
+void delete_condition(Record[] ,int cnt);
 
 #endif
